@@ -10,3 +10,16 @@ This also provides default user with a password (in console window ) which can b
 Now, to alter the default behaviour of spring security we have to #CONFIGURE it in some way, that may allow access to some pages we want without logging in.
 To #CONFIGURE this, comes a @Configuration annotation class called WebSecurityConfigurerAdapter. Here, is a method called configure(you can find in OG class).
 We can modify access behaviour while on UI (aka formLogin) or accessing service via backend(aka httpbasic)
+
+	/**
+	 * From Spring Security 5.7, the WebSecurityConfigurerAdapter is deprecated to encourage users
+	 * to move towards a component-based security configuration. It is recommended to create a bean
+	 * of type SecurityFilterChain for security related configurations.  
+   * e.g. here, https://github.com/Sakshi-ashe/spring-security/blob/main/section2/springsecsection2latest/src/main/java/com/eazybytes/config/ProjectSecurityConfig.java
+   **/
+   
+ default : anyRequest().authenticated()
+ custom : antMatchers("/account").authenticated()
+ permit : antMatchers("/contactus").permitAll()
+ denyAll : anyRequest().denyAll()
+ permitAll : anyRequest().permitAll()
