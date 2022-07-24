@@ -1,0 +1,12 @@
+So there are two kind of pages in  a website.
+
+one, Can be accessed by anyone without logging in
+second, only accessible to logged in user.
+
+Spring Security dependency, by default protects all services/mapping in all controllers. i.e. it gives 401 by default if any request is made.
+This also provides default user with a password (in console window ) which can be changed later in application.properties file.
+
+
+Now, to alter the default behaviour of spring security we have to #CONFIGURE it in some way, that may allow access to some pages we want without logging in.
+To #CONFIGURE this, comes a @Configuration annotation class called WebSecurityConfigurerAdapter. Here, is a method called configure(you can find in OG class).
+We can modify access behaviour while on UI (aka formLogin) or accessing service via backend(aka httpbasic)
