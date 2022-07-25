@@ -1,0 +1,10 @@
+CORS- (Cross origin resource sharing) - communication between UI and backend projects running on different domain or ports. When communication is made from UI to an API 
+CORS error is thrown. which should be handles inside configure method of WebServiceConfigureAdapter.
+
+CSRF( Cross site request forgery)
+
+Let's say you login to netflix, your auth token is stored as cookies in browser. If you go to a malicious site it can take the netflix cookie and create any HTTP request to netflix 
+on your behalf. This is prevented by using CSRF token which is not kept in browser cookie. and other sites thus cannot use cookie in browser alone to make a request on your behalf
+they need CSRF token too, otherwise it would be a invalid request.
+
+To do : where is CSRF token stored client side?
