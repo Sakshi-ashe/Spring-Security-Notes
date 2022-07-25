@@ -1,0 +1,14 @@
+Till now, we knew how to create 1 user (which came by default or made via application properties)
+
+But when we want many users, say need users from DB table, we have to use User MAnager interface, which not only create those users but also provide them methods.
+
+create/update/delete user
+get username 
+get password
+get authorities
+load user by username
+change password etc.
+
+JDBC User Details Manager is used in configuration, db is defined in app.properties
+
+https://github.com/Sakshi-ashe/spring-security/blob/main/section3/springsecsection3latest/src/main/java/com/eazybytes/config/ProjectSecurityConfig.java
