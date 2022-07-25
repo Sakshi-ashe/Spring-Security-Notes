@@ -1,0 +1,5 @@
+Authentication PRovider is the man behind how to authenticate() via 
+- password
+- otp
+- fingerprint 
+- pattern
